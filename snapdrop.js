@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         snapDrop paste
-// @version      0.2
+// @version      0.3
 // @description  为snapDrop添加鼠标粘贴按钮
 // @author       kuai
 // @match        https://snapdrop.net/
@@ -31,4 +31,10 @@
 	});
 	document.querySelector("header").appendChild(a);
 
+	let input = document.createElement("input");
+	input.value = "在此进行粘贴";
+	input.addEventListener("input", () => {
+		input.value = "在此进行粘贴";
+	});
+	document.querySelector("header").appendChild(input);
 })();
